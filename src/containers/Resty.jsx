@@ -6,7 +6,6 @@ import {
     deletePost,
     createPost
 } from '../services/fetches';
-import '../components/display/Display.css'
 
 export default class NameTag extends Component {
     state = {

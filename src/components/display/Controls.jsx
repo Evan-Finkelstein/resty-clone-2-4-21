@@ -17,6 +17,7 @@ const Controls = ({ onChange, onSubmit }) => (
                 name="method"
                 type="radio"
                 value="get"
+                select="true"
                 onChange={onChange} />
         </label>
         <label htmlFor="delete"> Delete

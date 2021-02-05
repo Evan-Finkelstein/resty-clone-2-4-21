@@ -6,12 +6,12 @@ import Controls from './Controls';
 const Display = ({ recieved, onChange, onSubmit }) => (
     <section
         className="radio"
-        data-testid="display">
+    >
         <Controls
             onChange={onChange}
             onSubmit={onSubmit} />
         <div >
-            <div>{recieved} </div>
+            <div data-testid="display">{recieved} </div>
         </div>
 
 
