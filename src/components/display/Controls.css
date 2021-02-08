@@ -1,0 +1,19 @@
+.radio{
+border: solid black 1px;
+margin: 5px;
+
+}
+.url{
+    margin-bottom: 20px;
+    margin-top: 50px;
+    width: 90%;
+    height: 100%
+}
+.json{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 90%;
+    height: 100px
+
+
+}

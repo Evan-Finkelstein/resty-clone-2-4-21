@@ -1,26 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './Controls.css';
 
 const Controls = ({ onChange, onSubmit }) => (
     <form onSubmit={onSubmit}>
-        <label htmlFor="url"> Url
-        <input
-                id="url"
-                name="url"
-                type="text"
-                onChange={onChange} />
+        <div>
+            <label htmlFor="url"> Url
+        <input className={styles.url}
+                    id="url"
+                    name="url"
+                    type="text"
+                    onChange={onChange} />
 
-        </label>
-        <label htmlFor="get"> Get
+            </label>
+        </div>
+        <label className={styles.radio} htmlFor="get"> Get
         <input
                 id="get"
                 name="method"
                 type="radio"
                 value="get"
-                select="true"
                 onChange={onChange} />
         </label>
-        <label htmlFor="delete"> Delete
+        <label className={styles.radio} htmlFor="delete"> Delete
         <input
                 id="delete"
                 name="method"
@@ -28,7 +30,7 @@ const Controls = ({ onChange, onSubmit }) => (
                 value="delete"
                 onChange={onChange} />
         </label>
-        <label htmlFor="post"> Post
+        <label className={styles.radio} htmlFor="post"> Post
         <input
                 id="post"
                 name="method"
@@ -36,7 +38,7 @@ const Controls = ({ onChange, onSubmit }) => (
                 value="post"
                 onChange={onChange} />
         </label>
-        <label htmlFor="put"> Put
+        <label className={styles.radio} htmlFor="put"> Put
         <input
                 id="put"
                 name="method"
@@ -44,13 +46,15 @@ const Controls = ({ onChange, onSubmit }) => (
                 value="put"
                 onChange={onChange} />
         </label>
-        <label htmlFor="json"> JSON
-        <input
-                id="json"
-                name="json"
-                type="text"
-                onChange={onChange} />
-        </label>
+        <div>
+            <label htmlFor="json"> JSON
+        <input className={styles.json}
+                    id="json"
+                    name="json"
+                    type="text"
+                    onChange={onChange} />
+            </label>
+        </div>
         <button>Submit</button>
     </form>
 );

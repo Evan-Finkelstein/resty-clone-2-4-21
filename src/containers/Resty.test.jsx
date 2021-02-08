@@ -3,7 +3,7 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Resty from './Resty';
 
-describe('Resty get method', () => {
+describe('Resty crud routes', () => {
     it('gets', () => {
         render(<Resty />);
 
@@ -21,7 +21,7 @@ describe('Resty get method', () => {
         fireEvent.submit(submitButton);
 
         return waitFor(() => {
-            expect(display).toHaveTextContent('"title":"sunt aut facere repellat provident occaecati excepturi optio reprehenderit"');
+            expect(display).toHaveTextContent('"userId": 1, "id": 1,');
         });
     });
     it('posts', () => {
@@ -48,7 +48,7 @@ describe('Resty get method', () => {
         fireEvent.submit(submitButton);
 
         return waitFor(() => {
-            expect(display).toHaveTextContent('{"id":101}');
+            expect(display).toHaveTextContent('{ "id": 101 }');
         });
     });
     it('puts', () => {
@@ -75,7 +75,7 @@ describe('Resty get method', () => {
         fireEvent.submit(submitButton);
 
         return waitFor(() => {
-            expect(display).toHaveTextContent('{"id":1}');
+            expect(display).toHaveTextContent('{ "id": 1 }');
         });
     });
     it('deletes', () => {
@@ -97,7 +97,7 @@ describe('Resty get method', () => {
         fireEvent.submit(submitButton);
 
         return waitFor(() => {
-            expect(display).toHaveTextContent('{}');
+            expect(display).toHaveTextContent('');
         });
     });
 });
