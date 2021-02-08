@@ -7,7 +7,7 @@ import {
     createPost
 } from '../services/fetches';
 
-export default class NameTag extends Component {
+export default class Resty extends Component {
     state = {
         url: '',
         method: '',
@@ -28,25 +28,25 @@ export default class NameTag extends Component {
         if (method === 'get') {
             const recieved = await fetchPost(url)
             await this.setState({
-                recieved: JSON.stringify(recieved),
+                recieved: JSON.stringify(recieved, null, 1)
             })
         }
         if (method === 'put') {
             const recieved = await updatePost(url, JSON.parse(json))
             await this.setState({
-                recieved: JSON.stringify(recieved)
+                recieved: JSON.stringify(recieved, null, 1)
             })
         }
         if (method === 'delete') {
             const recieved = await deletePost(url);
             await this.setState({
-                recieved: JSON.stringify(recieved)
+                recieved: JSON.stringify(recieved, null, 1)
             });
         }
         if (method === 'post') {
             const recieved = await createPost(url, JSON.parse(json))
             await this.setState({
-                recieved: JSON.stringify(recieved)
+                recieved: JSON.stringify(recieved, null, 1)
             });
         }
 

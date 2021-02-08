@@ -4,32 +4,36 @@ exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
     <section
-      class="radio"
+      class="display"
     >
       <form>
+        <div>
+          <label
+            for="url"
+          >
+             Url
+            <input
+              class="url"
+              id="url"
+              name="url"
+              type="text"
+            />
+          </label>
+        </div>
         <label
-          for="url"
-        >
-           Url
-          <input
-            id="url"
-            name="url"
-            type="text"
-          />
-        </label>
-        <label
+          class="radio"
           for="get"
         >
            Get
           <input
             id="get"
             name="method"
-            select="true"
             type="radio"
             value="get"
           />
         </label>
         <label
+          class="radio"
           for="delete"
         >
            Delete
@@ -41,6 +45,7 @@ exports[`App component renders App 1`] = `
           />
         </label>
         <label
+          class="radio"
           for="post"
         >
            Post
@@ -52,6 +57,7 @@ exports[`App component renders App 1`] = `
           />
         </label>
         <label
+          class="radio"
           for="put"
         >
            Put
@@ -62,26 +68,28 @@ exports[`App component renders App 1`] = `
             value="put"
           />
         </label>
-        <label
-          for="json"
-        >
-           JSON
-          <input
-            id="json"
-            name="json"
-            type="text"
-          />
-        </label>
+        <div>
+          <label
+            for="json"
+          >
+             JSON
+            <input
+              class="json"
+              id="json"
+              name="json"
+              type="text"
+            />
+          </label>
+        </div>
         <button>
           Submit
         </button>
       </form>
       <div>
         <div
+          class="results"
           data-testid="display"
-        >
-           
-        </div>
+        />
       </div>
     </section>
   </div>
